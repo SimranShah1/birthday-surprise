@@ -1,0 +1,1684 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Ayush ❤️</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.container { max-width: 400px; }
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  color: #ff6b81;
+  cursor: pointer;
+  margin-top: 15px;
+}
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+}
+.hidden { display: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div id="screen1">
+  <h1>Happy Birthday Bubuu ❤️</h1>
+  <p>Ready for your surprise, Aayu?</p>
+  <button onclick="next(2)">Start</button>
+</div>
+
+<div id="screen2" class="hidden">
+  <h2>Puzzle 1 🧩</h2>
+  <p>Where did we first meet?</p>
+  <input id="ans1" placeholder="Type here">
+  <br>
+  <button onclick="check1()">Submit</button>
+</div>
+
+<div id="screen3" class="hidden">
+  <h2>Puzzle 2 💭</h2>
+  <p>Our first special memory in Bangalore?</p>
+  <input id="ans2" placeholder="Hint: First night in BLR">
+  <br>
+  <button onclick="check2()">Submit</button>
+</div>
+
+<div id="screen4" class="hidden">
+  <h2>Final Puzzle ❤️</h2>
+  <p>Which evening do I love the most with you?</p>
+  <input id="ans3" placeholder="Hint: Friday eve">
+  <br>
+  <button onclick="check3()">Unlock</button>
+</div>
+
+<div id="screen5" class="hidden">
+  <h2>You unlocked my heart 💖</h2>
+  <p>
+  Hey Aayu,<br><br>
+  From that random moment in the college basement to our first night in Bangalore…
+  every second with you has felt like something out of a dream.<br><br>
+  I don’t just like you… I crave your presence, your voice, your chaos, your calm… all of you.
+  You’re my comfort, my excitement, my favorite distraction 💕<br><br>
+  And honestly… if I had to choose again, I’d still choose you. Every single time.
+  <br><br>
+  Happy Birthday bubuu ❤️
+  </p>
+</div>
+
+</div>
+
+<script>
+function next(n) {
+  document.querySelectorAll('div[id^="screen"]').forEach(s => s.classList.add('hidden'));
+  document.getElementById('screen'+n).classList.remove('hidden');
+}
+
+function check1() {
+  if(document.getElementById('ans1').value.toLowerCase().includes('basement')) next(3);
+  else alert('Think again baby 😏');
+}
+
+function check2() {
+  if(document.getElementById('ans2').value.toLowerCase().includes('night')) next(4);
+  else alert('Nope 😝');
+}
+
+function check3() {
+  if(document.getElementById('ans3').value.toLowerCase().includes('friday')) next(5);
+  else alert('Try again ❤️');
+}
+</script>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Bubuu 💖</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffd6e0, #ffe6f0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h2 { color: #ff4d6d; }
+
+button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover { background: #ff3355; }
+
+.feedback {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ff4d6d;
+}
+
+.puzzle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-top: 15px;
+}
+
+.tile {
+  width: 100%;
+  padding-top: 100%;
+  background-size: 300% 300%;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="app">
+  <h2>Hey Bubuu 🥺💖</h2>
+  <p>Let’s see how well you know us 😏</p>
+  <button onclick="startQuiz()">Start 💌</button>
+</div>
+
+<script>
+const questions = [
+{
+  q: "When did you first start liking me? 💖",
+  options: [
+    "The moment I saw you 👀",
+    "When we started talking 💬",
+    "When you made me smile 🥺",
+    "I’ve always liked you 😌"
+  ],
+  correct: 1
+},
+{
+  q: "Which moment of ours is your favorite? 🥹",
+  options: [
+    "First meeting 👀",
+    "Basement Chaos 🌙",
+    "Our first khuchupuu 😂",
+    "Every moment with you 💖"
+  ],
+  correct: 3
+},
+{
+  q: "What did I wore when we first met in BLR? 😏",
+  options: [
+    "Black top and beige pant🥺",
+    "Black top and Denim Jeans 😂",
+    "Green top and Black Pant ❤️",
+    "white shirt and Black Pant💖"
+  ],
+  correct: 2
+},
+{
+  q: "How much do you love me? 💕",
+  options: [
+    "A little 🤏",
+    "A lot 💖",
+    "Too much 😌",
+    "Infinity ♾️"
+  ],
+  final: true
+}
+];
+
+let current = 0;
+
+function startQuiz() {
+  showQuestion();
+}
+
+function showQuestion() {
+  const app = document.getElementById("app");
+  const q = questions[current];
+
+  let optionsHTML = "";
+  q.options.forEach((opt, i) => {
+    optionsHTML += `<button onclick="answer(${i})">${opt}</button>`;
+  });
+
+  app.innerHTML = `
+    <h2>${q.q}</h2>
+    ${optionsHTML}
+    <div class="feedback" id="feedback"></div>
+  `;
+}
+
+function answer(i) {
+  const q = questions[current];
+  const feedback = document.getElementById("feedback");
+
+  if (q.final) {
+    showLoveScreen();
+    return;
+  }
+
+  if (i === q.correct) {
+    feedback.innerText = "Hehe correct 😌💖";
+  } else {
+    feedback.innerText = "Hmm wrong answer mister 👀💔";
+  }
+
+  setTimeout(() => {
+    current++;
+    showQuestion();
+  }, 1000);
+}
+
+function showLoveScreen() {
+  const app = document.getElementById("app");
+
+  app.innerHTML = `
+    <h2>Correct answer: Infinity only 😤❤️</h2>
+    <p>You passed the love test bubuu 🥺💖</p>
+    <button onclick="startPuzzle()">Continue 💌</button>
+  `;
+}
+
+function startPuzzle() {
+  const app = document.getElementById("app");
+
+  app.innerHTML = `
+    <h2>Fix this to see something special 🧩💖</h2>
+    <div class="puzzle" id="puzzle"></div>
+  `;
+
+  createPuzzle();
+}
+
+let tiles = [];
+const img = "C:\Users\Simran Shah\Downloads\Birthday_Surprise"; // 👉 REPLACE WITH YOUR IMAGE
+
+function createPuzzle() {
+  tiles = [...Array(9).keys()];
+  tiles.sort(() => Math.random() - 0.5);
+  renderPuzzle();
+}
+
+function renderPuzzle() {
+  const puzzle = document.getElementById("puzzle");
+  puzzle.innerHTML = "";
+
+  tiles.forEach((val, idx) => {
+    const tile = document.createElement("div");
+    tile.className = "tile";
+    tile.style.backgroundImage = `url(${img})`;
+    tile.style.backgroundPosition = `${(val % 3) * 50}% ${Math.floor(val / 3) * 50}%`;
+
+    tile.onclick = () => swap(idx);
+    puzzle.appendChild(tile);
+  });
+}
+
+function swap(index) {
+  if (index > 0) {
+    [tiles[index], tiles[index - 1]] = [tiles[index - 1], tiles[index]];
+    renderPuzzle();
+  }
+
+  if (isSolved()) {
+    setTimeout(() => {
+      document.getElementById("app").innerHTML = `
+        <h2>I love you bubuu ❤️🥺</h2>
+        <p>You mean everything to me 💖</p>
+      `;
+    }, 500);
+  }
+}
+
+function isSolved() {
+  return tiles.every((val, i) => val === i);
+}
+</script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Ayush ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#ffd6e0,#ffe6f0);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.container{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:420px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1{
+  color:#ff4d6d;
+}
+
+h2{
+  color:#ff4d6d;
+}
+
+button{
+  width:100%;
+  margin:8px 0;
+  padding:12px;
+  border:none;
+  border-radius:15px;
+  background:#ff4d6d;
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#ff3355;
+}
+
+.feedback{
+  margin-top:10px;
+  font-size:14px;
+  color:#ff4d6d;
+}
+
+.puzzle{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:4px;
+  margin-top:15px;
+}
+
+.tile{
+  width:100%;
+  padding-top:100%;
+  background-size:300% 300%;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="app">
+
+<h1>🎂 Happy Birthday Ayush ❤️</h1>
+
+<p>
+A tiny surprise made with lots of love 💌<br>
+Let's see how well you know us 😏
+</p>
+
+<button onclick="startQuiz()">Start the Love Quiz 💖</button>
+
+</div>
+
+<script>
+
+const questions = [
+
+{
+q:"When did you first start liking me? 💖",
+options:[
+"The moment I saw you 👀",
+"When we started talking 💬",
+"When you made me smile 🥺",
+"I’ve always liked you 😌"
+],
+correct:1
+},
+
+{
+q:"Which moment of ours is your favorite? 🥹",
+options:[
+"First meeting 👀",
+"Basement Chaos 🌙",
+"Our first khuchupuu 😂",
+"Every moment with you 💖"
+],
+correct:3
+},
+
+{
+q:"What did I wore when we first met in BLR? 😏",
+options:[
+"Black top and beige pant 🥺",
+"Black top and Denim Jeans 😂",
+"Green top and Black Pant ❤️",
+"White shirt and Black Pant 💖"
+],
+correct:2
+},
+
+{
+q:"How much do you love me? 💕",
+options:[
+"A little 🤏",
+"A lot 💖",
+"Too much 😌",
+"Infinity ♾️"
+],
+final:true
+}
+
+];
+
+let current=0;
+
+function startQuiz(){
+showQuestion();
+}
+
+function showQuestion(){
+
+const app=document.getElementById("app");
+const q=questions[current];
+
+let optionsHTML="";
+
+q.options.forEach((opt,i)=>{
+optionsHTML+=`<button onclick="answer(${i})">${opt}</button>`;
+});
+
+app.innerHTML=`
+
+<h2>${q.q}</h2>
+
+${optionsHTML}
+
+<div class="feedback" id="feedback"></div>
+
+`;
+
+}
+
+function answer(i){
+
+const q=questions[current];
+const feedback=document.getElementById("feedback");
+
+if(q.final){
+showLoveScreen();
+return;
+}
+
+if(i===q.correct){
+feedback.innerText="Correct 😌💖";
+}
+else{
+feedback.innerText="Hmm wrong answer mister 👀";
+}
+
+setTimeout(()=>{
+current++;
+showQuestion();
+},900);
+
+}
+
+function showLoveScreen(){
+
+const app=document.getElementById("app");
+
+app.innerHTML=`
+
+<h2>Correct answer: Infinity only 😤❤️</h2>
+
+<p>You passed the love test bubuu 🥺💖</p>
+
+<button onclick="startPuzzle()">One Last Surprise 🧩</button>
+
+`;
+
+}
+
+function startPuzzle(){
+
+const app=document.getElementById("app");
+
+app.innerHTML=`
+
+<h2>Fix the puzzle to reveal something special 🧩💖</h2>
+
+<div class="puzzle" id="puzzle"></div>
+
+`;
+
+createPuzzle();
+
+}
+
+let tiles=[];
+const img="./image.jpeg"; 
+
+function createPuzzle(){
+
+tiles=[0,1,2,3,4,5,6,7,8];
+
+tiles.sort(()=>Math.random()-0.5);
+
+renderPuzzle();
+
+}
+
+function renderPuzzle(){
+
+const puzzle=document.getElementById("puzzle");
+puzzle.innerHTML="";
+
+tiles.forEach((val,idx)=>{
+
+const tile=document.createElement("div");
+
+tile.className="tile";
+
+tile.style.backgroundImage=`url(${img})`;
+
+tile.style.backgroundPosition=`${(val%3)*50}% ${Math.floor(val/3)*50}%`;
+
+tile.onclick=()=>swap(idx);
+
+puzzle.appendChild(tile);
+
+});
+
+}
+
+function swap(index){
+
+if(index>0){
+
+[tiles[index],tiles[index-1]]=[tiles[index-1],tiles[index]];
+
+renderPuzzle();
+
+}
+
+if(isSolved()){
+
+setTimeout(()=>{
+
+document.getElementById("app").innerHTML=`
+
+<h2>I love you bubuu ❤️🥺</h2>
+
+<p>Happy Birthday Ayush 🎂💖</p>
+
+`;
+
+},400);
+
+}
+
+}
+
+function isSolved(){
+
+return tiles.every((val,i)=>val===i);
+
+}
+
+</script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Ayush ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#ffd6e0,#ffe6f0);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.container{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:420px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1,h2{ color:#ff4d6d; }
+
+button{
+  width:100%;
+  margin:8px 0;
+  padding:12px;
+  border:none;
+  border-radius:15px;
+  background:#ff4d6d;
+  color:white;
+  cursor:pointer;
+}
+
+button:hover{ background:#ff3355; }
+
+.feedback{
+  margin-top:10px;
+  color:#ff4d6d;
+  font-size:14px;
+}
+
+.puzzle{
+  width:300px;
+  height:300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:3px;
+}
+
+.tile{
+  width:100px;
+  height:100px;
+  background-size:300px 300px;
+  transition:0.2s;
+  cursor:pointer;
+}
+
+.tile:hover{
+  transform:scale(0.96);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="app">
+  <h1>🎂 Happy Birthday Ayush ❤️</h1>
+  <p>A tiny surprise made with lots of love 💌</p>
+  <button onclick="startQuiz()">Start 💖</button>
+</div>
+
+<script>
+
+const questions = [
+{
+q:"When did you first start liking me? 💖",
+options:[
+"The moment I saw you 👀",
+"When we started talking 💬",
+"When you made me smile 🥺",
+"I’ve always liked you 😌"
+],
+correct:1
+},
+{
+q:"Which moment of ours is your favorite? 🥹",
+options:[
+"First meeting 👀",
+"Basement Chaos 🌙",
+"Our first khuchupuu 😂",
+"Every moment with you 💖"
+],
+correct:3
+},
+{
+q:"What did I wore when we first met in BLR? 😏",
+options:[
+"Black top and beige pant 🥺",
+"Black top and Denim Jeans 😂",
+"Green top and Black Pant ❤️",
+"White shirt and Black Pant 💖"
+],
+correct:2
+},
+{
+q:"How much do you love me? 💕",
+options:[
+"A little 🤏",
+"A lot 💖",
+"Too much 😌",
+"Infinity ♾️"
+],
+correct:3,
+final:true
+}
+];
+
+let current=0;
+
+function startQuiz(){ showQuestion(); }
+
+function showQuestion(){
+const app=document.getElementById("app");
+const q=questions[current];
+
+let html=`<h2>${q.q}</h2>`;
+q.options.forEach((opt,i)=>{
+html+=`<button onclick="answer(${i})">${opt}</button>`;
+});
+
+html+=`<div class="feedback" id="feedback"></div>`;
+app.innerHTML=html;
+}
+
+function answer(i){
+const q=questions[current];
+const fb=document.getElementById("feedback");
+
+if(i === q.correct){
+fb.innerText="Yayyy correct 😌💖";
+
+setTimeout(()=>{
+if(q.final){
+showLoveScreen();
+}else{
+current++;
+showQuestion();
+}
+},700);
+
+}else{
+fb.innerText="Nooo 😤 think again bubuu 💔";
+}
+}
+
+function showLoveScreen(){
+document.getElementById("app").innerHTML=`
+<h2>Correct answer: Infinity only 😤❤️</h2>
+<p>You passed the love test bubuu 🥺💖</p>
+<button onclick="startPuzzle()">Final Surprise 🧩</button>
+`;
+}
+
+/////////////////////////////
+// FAST PUZZLE
+/////////////////////////////
+
+let tiles=[];
+let emptyIndex=8;
+const img="image.jpeg"; // keep image in same folder
+
+function startPuzzle(){
+document.getElementById("app").innerHTML=`
+<h2>Fix the puzzle 🧩💖</h2>
+<div class="puzzle" id="puzzle"></div>
+`;
+createPuzzle();
+}
+
+function createPuzzle(){
+tiles=[0,1,2,3,4,5,6,7,8];
+
+// shuffle
+for(let i=tiles.length-1;i>0;i--){
+let j=Math.floor(Math.random()*(i+1));
+[tiles[i],tiles[j]]=[tiles[j],tiles[i]];
+}
+
+emptyIndex=tiles.indexOf(8);
+renderPuzzle();
+}
+
+function renderPuzzle(){
+const puzzle=document.getElementById("puzzle");
+puzzle.innerHTML="";
+
+tiles.forEach((val,idx)=>{
+const tile=document.createElement("div");
+tile.className="tile";
+
+if(val===8){
+tile.style.background="#fff";
+tile.style.cursor="default";
+}
+else{
+tile.style.backgroundImage=`url(${img})`;
+tile.style.backgroundPosition=
+`${(val % 3)*-100}px ${Math.floor(val/3)*-100}px`;
+
+tile.onclick=()=>moveTile(idx);
+}
+
+puzzle.appendChild(tile);
+});
+}
+
+function moveTile(index){
+
+  // swap clicked tile with empty tile (anywhere)
+  [tiles[index], tiles[emptyIndex]] =
+  [tiles[emptyIndex], tiles[index]];
+
+  emptyIndex = index;
+
+  requestAnimationFrame(renderPuzzle);
+
+  if(isSolved()){
+    setTimeout(()=>{
+      document.getElementById("app").innerHTML=`
+        <h2>I love you bubuu ❤️🥺</h2>
+        <p>Happy Birthday Ayush 🎂💖</p>
+      `;
+    },300);
+  }
+}
+
+function isSolved(){
+return tiles.every((v,i)=>v===i);
+}
+
+</script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Ayush ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#ffd6e0,#ffe6f0);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.container{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:420px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1,h2{ color:#ff4d6d; }
+
+button{
+  width:100%;
+  margin:8px 0;
+  padding:12px;
+  border:none;
+  border-radius:15px;
+  background:#ff4d6d;
+  color:white;
+  cursor:pointer;
+}
+
+button:hover{ background:#ff3355; }
+
+.feedback{
+  margin-top:10px;
+  color:#ff4d6d;
+  font-size:14px;
+}
+
+.puzzle{
+  width:300px;
+  height:300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:4px;
+}
+
+.tile{
+  width:100px;
+  height:100px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.tile:hover{
+  transform:scale(0.95);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="app">
+  <h1>🎂 Happy Birthday Ayush ❤️</h1>
+  <p>A tiny surprise made with lots of love 💌</p>
+  <button onclick="startQuiz()">Start 💖</button>
+</div>
+
+<script>
+
+/////////////////////////
+// QUIZ
+/////////////////////////
+
+const questions = [
+{
+q:"When did you first start liking me? 💖",
+options:[
+"The moment I saw you 👀",
+"When we started talking 💬",
+"When you made me smile 🥺",
+"I’ve always liked you 😌"
+],
+correct:1
+},
+{
+q:"Which moment of ours is your favorite? 🥹",
+options:[
+"First meeting 👀",
+"Basement Chaos 🌙",
+"Our first khuchupuu 😂",
+"Every moment with you 💖"
+],
+correct:3
+},
+{
+q:"What did I wore when we first met in BLR? 😏",
+options:[
+"Black top and beige pant 🥺",
+"Black top and Denim Jeans 😂",
+"Green top and Black Pant ❤️",
+"White shirt and Black Pant 💖"
+],
+correct:2
+},
+{
+q:"How much do you love me? 💕",
+options:[
+"A little 🤏",
+"A lot 💖",
+"Too much 😌",
+"Infinity ♾️"
+],
+correct:3,
+final:true
+}
+];
+
+let current=0;
+
+function startQuiz(){ showQuestion(); }
+
+function showQuestion(){
+const app=document.getElementById("app");
+const q=questions[current];
+
+let html=`<h2>${q.q}</h2>`;
+q.options.forEach((opt,i)=>{
+html+=`<button onclick="answer(${i})">${opt}</button>`;
+});
+
+html+=`<div class="feedback" id="feedback"></div>`;
+app.innerHTML=html;
+}
+
+function answer(i){
+const q=questions[current];
+const fb=document.getElementById("feedback");
+
+if(i===q.correct){
+fb.innerText="Yayyy correct 😌💖";
+
+setTimeout(()=>{
+if(q.final){
+showLoveScreen();
+}else{
+current++;
+showQuestion();
+}
+},700);
+
+}else{
+fb.innerText="Nooo 😤 think again bubuu 💔";
+}
+}
+
+function showLoveScreen(){
+document.getElementById("app").innerHTML=`
+<h2>Correct answer: Infinity only 😤❤️</h2>
+<p>You passed the love test bubuu 🥺💖</p>
+<button onclick="startPuzzle()">Final Surprise 💖</button>
+`;
+}
+
+/////////////////////////
+// TAP TO REVEAL GRID
+/////////////////////////
+
+const img="image.jpeg"; // keep in same folder
+let revealed = Array(9).fill(false);
+
+function startPuzzle(){
+document.getElementById("app").innerHTML=`
+<h2>Tap to reveal something special 💖</h2>
+<div class="puzzle" id="puzzle"></div>
+`;
+renderPuzzle();
+}
+
+function renderPuzzle(){
+const puzzle=document.getElementById("puzzle");
+puzzle.innerHTML="";
+
+revealed.forEach((isOpen,idx)=>{
+const tile=document.createElement("div");
+tile.className="tile";
+
+if(isOpen){
+tile.style.backgroundImage=`url(${img})`;
+tile.style.backgroundSize="300px 300px";
+tile.style.backgroundPosition=
+`${(idx%3)*-100}px ${Math.floor(idx/3)*-100}px`;
+}else{
+tile.style.background="#ff4d6d";
+tile.innerHTML="💖";
+tile.style.display="flex";
+tile.style.alignItems="center";
+tile.style.justifyContent="center";
+tile.style.color="white";
+tile.style.fontSize="20px";
+}
+
+tile.onclick=()=>revealTile(idx);
+puzzle.appendChild(tile);
+});
+}
+
+function revealTile(index){
+revealed[index]=true;
+renderPuzzle();
+
+if(revealed.every(v=>v)){
+setTimeout(()=>{
+document.getElementById("app").innerHTML=`
+<h2>I love you bubuu ❤️🥺</h2>
+<p>Happy Birthday Ayush 🎂💖</p>
+`;
+},500);
+}
+}
+
+</script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Ayush ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  background:linear-gradient(135deg,#ffd6e0,#ffe6f0);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.container{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:420px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1,h2{ color:#ff4d6d; }
+
+button{
+  width:100%;
+  margin:8px 0;
+  padding:12px;
+  border:none;
+  border-radius:15px;
+  background:#ff4d6d;
+  color:white;
+  cursor:pointer;
+}
+
+button:hover{ background:#ff3355; }
+
+.feedback{
+  margin-top:10px;
+  color:#ff4d6d;
+  font-size:14px;
+}
+
+.puzzle{
+  width:300px;
+  height:300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:4px;
+}
+
+.tile{
+  width:100px;
+  height:100px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.tile:hover{
+  transform:scale(0.95);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="app">
+  <h1>🎂 Happy Birthday Ayush ❤️</h1>
+  <p>A tiny surprise made with lots of love 💌</p>
+  <button onclick="startQuiz()">Start 💖</button>
+</div>
+
+<script>
+
+/////////////////////////
+// QUIZ
+/////////////////////////
+
+const questions = [
+{
+q:"When did you first start liking me? 💖",
+options:[
+"The moment I saw you 👀",
+"When we started talking 💬",
+"When you made me smile 🥺",
+"I’ve always liked you 😌"
+],
+correct:1
+},
+{
+q:"Which moment of ours is your favorite? 🥹",
+options:[
+"First meeting 👀",
+"Basement Chaos 🌙",
+"Our first khuchupuu 😂",
+"Every moment with you 💖"
+],
+correct:3
+},
+{
+q:"What did I wore when we first met in BLR? 😏",
+options:[
+"Black top and beige pant 🥺",
+"Black top and Denim Jeans 😂",
+"Green top and Black Pant ❤️",
+"White shirt and Black Pant 💖"
+],
+correct:2
+},
+{
+q:"How much do you love me? 💕",
+options:[
+"A little 🤏",
+"A lot 💖",
+"Too much 😌",
+"Infinity ♾️"
+],
+correct:3,
+final:true
+}
+];
+
+let current=0;
+
+function startQuiz(){ showQuestion(); }
+
+function showQuestion(){
+const app=document.getElementById("app");
+const q=questions[current];
+
+let html=`<h2>${q.q}</h2>`;
+q.options.forEach((opt,i)=>{
+html+=`<button onclick="answer(${i})">${opt}</button>`;
+});
+
+html+=`<div class="feedback" id="feedback"></div>`;
+app.innerHTML=html;
+}
+
+function answer(i){
+const q=questions[current];
+const fb=document.getElementById("feedback");
+
+if(i===q.correct){
+fb.innerText="Yayyy correct 😌💖";
+
+setTimeout(()=>{
+if(q.final){
+showLoveScreen();
+}else{
+current++;
+showQuestion();
+}
+},700);
+
+}else{
+fb.innerText="Nooo 😤 think again bubuu 💔";
+}
+}
+
+function showLoveScreen(){
+document.getElementById("app").innerHTML=`
+<h2>Correct answer: Infinity only 😤❤️</h2>
+<p>You passed the love test bubuu 🥺💖</p>
+<button onclick="startPuzzle()">Final Surprise 💖</button>
+`;
+}
+
+/////////////////////////
+// TAP TO REVEAL
+/////////////////////////
+
+const img="image.jpeg"; // keep image in same folder
+let revealed = Array(9).fill(false);
+
+function startPuzzle(){
+document.getElementById("app").innerHTML=`
+<h2>Tap to reveal something special 💖</h2>
+<div class="puzzle" id="puzzle"></div>
+`;
+renderPuzzle();
+}
+
+function renderPuzzle(){
+const puzzle=document.getElementById("puzzle");
+puzzle.innerHTML="";
+
+revealed.forEach((isOpen,idx)=>{
+const tile=document.createElement("div");
+tile.className="tile";
+
+if(isOpen){
+tile.style.backgroundImage=`url(${img})`;
+tile.style.backgroundSize="300px 300px";
+tile.style.backgroundPosition=
+`${(idx%3)*-100}px ${Math.floor(idx/3)*-100}px`;
+}else{
+tile.style.background="#ff4d6d";
+tile.innerHTML="💖";
+tile.style.display="flex";
+tile.style.alignItems="center";
+tile.style.justifyContent="center";
+tile.style.color="white";
+tile.style.fontSize="20px";
+}
+
+tile.onclick=()=>revealTile(idx);
+puzzle.appendChild(tile);
+});
+}
+
+function revealTile(index){
+revealed[index]=true;
+renderPuzzle();
+
+if(revealed.every(v=>v)){
+setTimeout(()=>{
+document.getElementById("app").innerHTML=`
+
+<div style="
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+padding:20px;
+background:linear-gradient(135deg,#e6a4a4,#f5c6c6);
+color:white;
+line-height:1.6;
+">
+
+<h2 style="font-size:26px; margin-bottom:20px;">
+You unlocked my heart 💖
+</h2>
+
+<p style="max-width:600px; font-size:15px;">
+
+Hey Aayu,<br><br>
+
+From that random moment in the college basement to our first night in Bangalore… every second with you has felt like something out of a dream.<br><br>
+
+I don’t just like you… I crave your presence, your voice, your chaos, your calm… all of you. You’re my comfort, my excitement, my favorite distraction 💕<br><br>
+
+And honestly… if I had to choose again, I’d still choose you. Every single time.<br><br>
+
+Happy Birthday bubuu ❤️
+
+</p>
+
+</div>
+
+`;
+},500);
+}
+}
+
+</script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Ayush ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  background:linear-gradient(135deg,#ffd6e0,#ffe6f0);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.container{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:420px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1,h2{ color:#ff4d6d; }
+
+button{
+  width:100%;
+  margin:8px 0;
+  padding:12px;
+  border:none;
+  border-radius:15px;
+  background:#ff4d6d;
+  color:white;
+  cursor:pointer;
+}
+
+button:hover{ background:#ff3355; }
+
+.feedback{
+  margin-top:10px;
+  color:#ff4d6d;
+  font-size:14px;
+}
+
+.puzzle{
+  width:300px;
+  height:300px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:4px;
+}
+
+.tile{
+  width:100px;
+  height:100px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.tile:hover{
+  transform:scale(0.95);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="app">
+  <h1>🎂 Happy Birthday Ayush ❤️</h1>
+  <p>A tiny surprise made with lots of love 💌</p>
+  <button onclick="startQuiz()">Start 💖</button>
+</div>
+
+<script>
+
+/////////////////////////
+// QUIZ
+/////////////////////////
+
+const questions = [
+{
+q:"When did you first start liking me? 💖",
+options:[
+"The moment I saw you 👀",
+"When we started talking 💬",
+"When you made me smile 🥺",
+"I’ve always liked you 😌"
+],
+correct:1
+},
+{
+q:"Which moment of ours is your favorite? 🥹",
+options:[
+"First meeting 👀",
+"Basement Chaos 🌙",
+"Our first khuchupuu 😂",
+"Every moment with you 💖"
+],
+correct:3
+},
+{
+q:"What did I wore when we first met in BLR? 😏",
+options:[
+"Black top and beige pant 🥺",
+"Black top and Denim Jeans 😂",
+"Green top and Black Pant ❤️",
+"White shirt and Black Pant 💖"
+],
+correct:2
+},
+{
+q:"How much do you love me? 💕",
+options:[
+"A little 🤏",
+"A lot 💖",
+"Too much 😌",
+"Infinity ♾️"
+],
+correct:3,
+final:true
+}
+];
+
+let current=0;
+
+function startQuiz(){ showQuestion(); }
+
+function showQuestion(){
+const app=document.getElementById("app");
+const q=questions[current];
+
+let html=`<h2>${q.q}</h2>`;
+q.options.forEach((opt,i)=>{
+html+=`<button onclick="answer(${i})">${opt}</button>`;
+});
+
+html+=`<div class="feedback" id="feedback"></div>`;
+app.innerHTML=html;
+}
+
+function answer(i){
+const q=questions[current];
+const fb=document.getElementById("feedback");
+
+if(i===q.correct){
+fb.innerText="Yayyy correct 😌💖";
+
+setTimeout(()=>{
+if(q.final){
+showLoveScreen();
+}else{
+current++;
+showQuestion();
+}
+},700);
+
+}else{
+fb.innerText="Nooo 😤 think again bubuu 💔";
+}
+}
+
+function showLoveScreen(){
+document.getElementById("app").innerHTML=`
+<h2>Correct answer: Infinity only 😤❤️</h2>
+<p>You passed the love test bubuu 🥺💖</p>
+<button onclick="startPuzzle()">Final Surprise 💖</button>
+`;
+}
+
+/////////////////////////
+// TAP TO REVEAL
+/////////////////////////
+
+const img="image.jpeg";
+let revealed = Array(9).fill(false);
+
+function startPuzzle(){
+document.getElementById("app").innerHTML=`
+<h2>Tap to reveal something special 💖</h2>
+<div class="puzzle" id="puzzle"></div>
+`;
+renderPuzzle();
+}
+
+function renderPuzzle(){
+const puzzle=document.getElementById("puzzle");
+puzzle.innerHTML="";
+
+revealed.forEach((isOpen,idx)=>{
+const tile=document.createElement("div");
+tile.className="tile";
+
+if(isOpen){
+tile.style.backgroundImage=`url(${img})`;
+tile.style.backgroundSize="300px 300px";
+tile.style.backgroundPosition=
+`${(idx%3)*-100}px ${Math.floor(idx/3)*-100}px`;
+}else{
+tile.style.background="#ff4d6d";
+tile.innerHTML="💖";
+tile.style.display="flex";
+tile.style.alignItems="center";
+tile.style.justifyContent="center";
+tile.style.color="white";
+tile.style.fontSize="20px";
+}
+
+tile.onclick=()=>revealTile(idx);
+puzzle.appendChild(tile);
+});
+}
+
+function revealTile(index){
+revealed[index]=true;
+renderPuzzle();
+
+if(revealed.every(v=>v)){
+setTimeout(()=>{
+showFinalMessage();
+},500);
+}
+}
+
+/////////////////////////
+// FINAL CLEAN SCREEN
+/////////////////////////
+
+function showFinalMessage(){
+document.body.innerHTML = `
+<style>
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #e6a4a4, #f5c6c6);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.final-container {
+  max-width: 600px;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  line-height: 1.8;
+}
+
+.final-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.final-text {
+  font-size: 16px;
+  opacity: 0.95;
+}
+</style>
+
+<div class="final-container">
+  <div class="final-title">You unlocked my heart 💖</div>
+
+  <div class="final-text">
+    Hey Aayu,<br><br>
+
+    From that random moment in the college basement to our first night in Bangalore… every second with you has felt like something out of a dream.<br><br>
+
+    I don’t just like you… I crave your presence, your voice, your chaos, your calm… all of you. You’re my comfort, my excitement, my favorite distraction 💕<br><br>
+
+    And honestly… if I had to choose again, I’d still choose you. Every single time.<br><br>
+
+    Happy Birthday bubuu ❤️
+  </div>
+</div>
+`;
+}
+
+</script>
+
+</body>
+</html>
